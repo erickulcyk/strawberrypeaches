@@ -189,6 +189,7 @@ void FilterCloud(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud)
 int main (int argc, char** argv)
 {
 	cout<<"Usage: [# iterations], [Use rgb], [ply file name], [use ICP]"<<endl;
+	
 	int iters = 3;
 	if(argc>1)
 	{
