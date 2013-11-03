@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+project(Kinect2Mesh)
+
+find_package(PCL 1.6 REQUIRED)
+#COMPONENTS common flann visualization surface filter)
+#find_package(FLANN REQUIRED)
+
+include_directories(${PCL_INCLUDE_DIRS})
+include_directories(${FLANN_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+link_directories(${FLANN_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+add_definitions(${FLANN_DEFINITIONS})
+add_executable(Kinect2Mesh src/*.cpp)
+target_link_libraries(Kinect2Mesh ${PCL_LIBRARIES})
+#${PCL_COMMON_LIBRARIES} ${PCL_FLANN_LIBRARIES} ${PCL_VISUALIZATION_LIBRARIES} ${PCL_SURFACE_LIBRARIES})
+#${PCL_COMMON_LIBRARIES} ${PCL_IO_LIBRARIES} ${PCL_FLANN_LIBRARIES})
