@@ -238,7 +238,9 @@ int main (int argc, char** argv)
 	cloud2->is_dense = false;
 	cloud2->points.resize (cloud2->width * cloud2->height);
 
-	ifstream file ("C:\\Users\\Eric\\Documents\\Visual Studio 2013\\Projects\\KinectExplorer-WPF\\bin\\Debug\\KinectDepth2.txt", ios::in|ios::binary|ios::ate);
+	//ifstream file ("C:\\Users\\Eric\\Documents\\Visual Studio 2013\\Projects\\KinectExplorer-WPF\\bin\\Debug\\KinectDepth2.txt", ios::in|ios::binary|ios::ate);
+	ifstream file ("..\\data\\KinectDepth2.txt", ios::in|ios::binary|ios::ate);
+	
 	if (file.is_open())
 	{
 		file.seekg (0, ios::beg);
