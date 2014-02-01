@@ -1,0 +1,16 @@
+#include "stree.h"
+
+void stree::keyPressEvent(QKeyEvent* event)
+{
+	cout<<"HERE"<<endl;
+	QTreeWidget::keyPressEvent(event);
+/*	switch (event->key())
+	{
+		case Qt::Key_Space:
+		case Qt::Key_Select:
+			if(currentItem())
+			{
+				emit QTreeWidget::itemClicked(currentItem(), 0);
+			}
+	}*/
+}
